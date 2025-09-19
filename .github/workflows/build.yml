@@ -29,6 +29,10 @@ jobs:
         with:
           optional-tasks: true
           version: '1.10.12' # Specify the Ant version you need
-
+      - name: Install Android SDK 25
+      - run: |
+             sdkmanager --install "platforms;android-25"
+             sdkmanager --install "build-tools;25.0.3"
+             yes | sdkmanager --licenses
       - name: Build with Ant
         run: ant compile release
