@@ -19,16 +19,11 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: '11' # Specify the Java version you need
+          java-version: '17' # Specify the Java version you need
           distribution: 'adopt'
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v2
-        with:
-          api-level: '30' # Specify the API level you need
-          target: 'android-30' # Specify the target you need
-          components: 'platform-tools,build-tools;30.0.3' # Specify required components
-
       - name: Set up Ant
         uses: cedx/setup-ant@v1
         with:
