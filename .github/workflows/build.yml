@@ -27,7 +27,8 @@ jobs:
       - name: Set up Ant
         uses: cedx/setup-ant@v1
         with:
-          ant-version: '1.10.12' # Specify the Ant version you need
+          optional-tasks: true
+          version: '1.10.12' # Specify the Ant version you need
 
       - name: Build with Ant
         run: ant compile release
