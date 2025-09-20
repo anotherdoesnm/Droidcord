@@ -25,7 +25,7 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
         with:
-          cmdline-tools-version: 1707406511
+          cmdline-tools-version: 9477386
       - name: Set up Ant
         uses: cedx/setup-ant@v1
         with:
