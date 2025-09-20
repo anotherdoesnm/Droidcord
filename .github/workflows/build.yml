@@ -35,5 +35,6 @@ jobs:
              sdkmanager --install "build-tools;25.0.3"
              yes | sdkmanager --licenses
              echo "sdk.dir=$HOME/.android/sdk"> local.properties
+             android update project --target 8 --path .
       - name: Build with Ant
         run: ant compile release
