@@ -31,5 +31,7 @@ jobs:
         with:
           optional-tasks: true
           version: '1.10.12' # Specify the Ant version you need
+      - name: Damn debug
+      - run: ls ~/.android/sdk/tools/lib
       - name: Build with Ant
         run: ant compile release
