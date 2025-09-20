@@ -23,18 +23,13 @@ jobs:
           distribution: 'adopt'
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v2
+        uses: android-actions/setup-android@v3
+        with:
+          cmdline-tools-version: 1707406511
       - name: Set up Ant
         uses: cedx/setup-ant@v1
         with:
           optional-tasks: true
           version: '1.10.12' # Specify the Ant version you need
-      - name: Install Android SDK 25
-        run: |
-             sdkmanager --install "platforms;android-25"
-             sdkmanager --install "build-tools;25.0.3"
-             yes | sdkmanager --licenses
-             echo "sdk.dir=$HOME/.android/sdk"> local.properties
-             android update project --target 8 --path .
       - name: Build with Ant
         run: ant compile release
